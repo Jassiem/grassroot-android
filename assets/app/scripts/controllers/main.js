@@ -1,10 +1,16 @@
 'use strict';
 
-angular.module('assetsApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+// dashboard controller
+function MainCtrl($scope, apiService, $http) {
+  $scope.output = '';
+  apiService.get(function(data,status){
+  	if( status === 200) {
+  		$scope.output = data;
+  	} else {
+  		$scope.output = 'error with api call';
+  	}
+  	
+  },'/api/test', 'GET', {});
+
+}
+MainCtrl.$inject = ['$scope', 'apiService', '$http'];
