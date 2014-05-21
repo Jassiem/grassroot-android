@@ -10,7 +10,7 @@ function MainCtrl($scope, apiService, $http) {
   		$scope.output = 'error with api call';
   	}
   	
-  },'/api/test', 'GET', {});
+  },'/api/test', {});
 
 }
 MainCtrl.$inject = ['$scope', 'apiService', '$http'];

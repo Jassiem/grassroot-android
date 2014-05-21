@@ -1,6 +1,7 @@
 // Service definition
 grassroot.service('apiService', ['$http', function($http){
   var API_DOMAIN = "http://aqueous-tor-6124.herokuapp.com"
+  //var API_DOMAIN = "http://localhost:3000"
 
   /* enable CORS */
   $http.defaults.useXDomain = true;
@@ -16,14 +17,14 @@ grassroot.service('apiService', ['$http', function($http){
 
   this.get = function(callback) {
     var url = API_DOMAIN + arguments[1];
-    var config = {method: arguments[2], url: url, params: arguments[3]};
+    var config = {method: 'GET', url: url, params: arguments[2]};
 
     sendResponse(config, callback);
   };
 
   this.post = function(callback) {
     var url = API_DOMAIN + arguments[1];
-    var config = {method: arguments[2], url: url, data: arguments[3]};
+    var config = {method: 'POST', url: url, data: arguments[2]};
 
     sendResponse(config, callback);
   };
