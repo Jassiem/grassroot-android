@@ -1,7 +1,7 @@
 // Service definition
 grassroot.service('apiService', ['$http', function($http){
-  //var API_DOMAIN = "http://aqueous-tor-6124.herokuapp.com"
-  var API_DOMAIN = "http://localhost:3000"
+  var API_DOMAIN = "http://aqueous-tor-6124.herokuapp.com"
+  //var API_DOMAIN = "http://localhost:3000"
 
   /* enable CORS */
   $http.defaults.useXDomain = true;
