@@ -6,12 +6,20 @@ module.exports = [
         "clobbers": [
             "Calendar"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
+        "id": "com.phonegap.plugins.PushPlugin.PushNotification",
+        "clobbers": [
+            "PushNotification"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "nl.x-services.plugins.calendar": "4.2.3"
+    "nl.x-services.plugins.calendar": "4.2.3",
+    "com.phonegap.plugins.PushPlugin": "2.2.0"
 }
 // BOTTOM OF METADATA
 });
