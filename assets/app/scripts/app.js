@@ -20,6 +20,26 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
         templateUrl: 'views/event.html',
         controller: 'EventCtrl'
       })
+      .when('/take_action',  {
+        templateUrl: 'views/take_action.html',
+        controller: 'TakeActionCtrl'
+      })
+      .when('/petitions',  {
+        templateUrl: 'views/petitions.html',
+        controller: 'PetitionsCtrl'
+      })
+      .when('/petitions/:id',  {
+        templateUrl: 'views/petition.html',
+        controller: 'PetitionCtrl'
+      })
+      .when('/sign_petition',  {
+        templateUrl: 'views/sign_petition.html',
+        controller: 'SignPetitionCtrl'
+      })
+      .when('/newsletter',  {
+        templateUrl: 'views/newsletter.html',
+        controller: 'NewsletterCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

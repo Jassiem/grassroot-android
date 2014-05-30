@@ -51,21 +51,21 @@ var app = {
             case 'registered':
               if ( e.regid.length > 0 ) {
                 console.log("Regid " + e.regid);
-                alert('registration id = '+e.regid);
+                //alert('registration id = '+e.regid);
               }
             break;
 
             case 'message':
               // this is the actual push notification. its format depends on the data model from the push server
-              alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+              //alert('message = '+e.message+' msgcnt = '+e.msgcnt);
             break;
 
             case 'error':
-              alert('GCM error = '+e.msg);
+              //alert('GCM error = '+e.msg);
             break;
 
             default:
-              alert('An unknown GCM event has occurred');
+              //alert('An unknown GCM event has occurred');
               break;
       }
     }

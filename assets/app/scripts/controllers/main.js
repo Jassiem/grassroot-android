@@ -19,7 +19,8 @@ function MainCtrl($scope, apiService, $http, cordovaReady, $timeout) {
 
   $scope.startGCM = function() {
   	var successHandler = function(result) {
-  		alert("Success. Result = " + result);
+  		//alert("Success. Result = " + result);
+      console.log('success');
   	};
 
   	var errorHandler = function(error) {
