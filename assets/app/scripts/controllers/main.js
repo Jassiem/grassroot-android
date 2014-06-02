@@ -24,7 +24,7 @@ function MainCtrl($scope, apiService, $http, cordovaReady, $timeout) {
   	};
 
   	var errorHandler = function(error) {
-  		alert(error);
+  		alert('giraffes');
   	};
 
 		var pushNotification = window.plugins.pushNotification;
