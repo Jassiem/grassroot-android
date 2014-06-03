@@ -3,10 +3,10 @@
 
 <form novalidate class='form-horizontal' role='form'  name='form.signpetition' ng-submit='signPetition()'>
     <div class='form-group'>
-      <label class='col-3 control-label' for='name'> Name</label>
+      <label class='col-3 control-label' for='name'>Full Name</label>
       <div class='col-7'>
-        <input id='name' class='form-control' type='text' name='name' ng-model='formData.name' ng-pattern="/[a-zA-z]+\s[a-zA-z]+/" ng-minlength="3" ng-maxlength="60" required/>
-        <p class='error-helper text-danger' ng-show='form.signpetition.name.$invalid && showErrors'>please enter your name</p>
+        <input id='name' class='form-control' type='text' name='name' ng-model='formData.name' ng-pattern="/[a-zA-z]+\s[a-zA-z]+/" ng-minlength="5" ng-maxlength="60" required/>
+        <p class='error-helper text-danger' ng-show='form.signpetition.name.$invalid && showErrors'>please enter your first and last name</p>
       </div>
     </div>
 

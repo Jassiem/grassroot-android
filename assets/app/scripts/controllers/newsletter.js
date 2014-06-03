@@ -4,9 +4,27 @@ function NewsletterCtrl($scope, apiService, $location) {
 	$scope.errorMessage = '';
 
 	$scope.signUp = function() {
-		alert('Subscribed.');
-		$location.url('/take_action')
+		// check if form is valid
+    if ($scope.form.signup.$valid === false) {
+      $scope.showErrors = true;
+      return;
+    }
+
+    // add key for rails strong parameters and user data
+    $scope.formData = {newsletter: $scope.formData};
+
+    // send form data to rails api
+    apiService.apiCall(function(data, status){
+      if(status == 200) {
+        $location.url('/take_action');
+      }
+      else {
+        $scope.errorMessage = 'Could not subscribe. Try again later.';
+      }
+
+    }, 'POST', '/api/subscribe', $scope.formData);
 	};
+
 };
 
 NewsletterCtrl.$inject = ['$scope', 'apiService', '$location'];
