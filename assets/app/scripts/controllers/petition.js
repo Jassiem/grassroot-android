@@ -1,5 +1,6 @@
 function PetitionCtrl($scope, apiService, $routeParams, $location) {
 	$scope.petition;
+	$scope.petition_id = $routeParams.id;
 
 	$scope.init = function() {
 		apiService.get(function(data, status) {

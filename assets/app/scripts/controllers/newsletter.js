@@ -25,6 +25,10 @@ function NewsletterCtrl($scope, apiService, $location) {
     }, 'POST', '/api/subscribe', $scope.formData);
 	};
 
+  $scope.cancel = function() {
+    $location.url('/take_action');
+  }
+
 };
 
 NewsletterCtrl.$inject = ['$scope', 'apiService', '$location'];

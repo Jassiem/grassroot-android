@@ -32,7 +32,7 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
         templateUrl: 'views/petition.html',
         controller: 'PetitionCtrl'
       })
-      .when('/sign_petition',  {
+      .when('/sign_petition/:id',  {
         templateUrl: 'views/sign_petition.html',
         controller: 'SignPetitionCtrl'
       })

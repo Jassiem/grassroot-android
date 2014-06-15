@@ -1,4 +1,4 @@
-function SignPetitionCtrl($scope, apiService, $location) {
+function SignPetitionCtrl($scope, apiService, $location, $routeParams) {
 	$scope.formData = {};
 	$scope.showErrors = false;
 	$scope.errorMessage = '';
@@ -10,7 +10,8 @@ function SignPetitionCtrl($scope, apiService, $location) {
       return;
     }
 
-    // add key for rails strong parameters and user data
+    // add key for rails strong parameters and petition data
+    $scope.formData.petition_id = $routeParams.id;
     $scope.formData = {petition: $scope.formData};
 
     // send form data to rails api
@@ -24,6 +25,10 @@ function SignPetitionCtrl($scope, apiService, $location) {
 
     }, 'POST', '/api/sign-petition', $scope.formData);
 	};
+
+  $scope.cancel = function() {
+    $location.url('/take_action');
+  }
 
 };
 

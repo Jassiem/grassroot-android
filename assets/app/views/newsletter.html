@@ -7,7 +7,7 @@
     <div class='form-group'>
       <label class='col-3 control-label' for='name'>Full Name</label>
       <div class='col-7'>
-        <input id='name' class='form-control' type='text' name='name' ng-model='formData.name' ng-pattern="/[a-zA-z]+\s[a-zA-z]+/" ng-minlength="5" ng-maxlength="60" required/>
+        <input id='name' class='form-control' type='text' name='name' ng-model='formData.recipient_name' ng-pattern="/[a-zA-z]+\s[a-zA-z]+/" ng-minlength="5" ng-maxlength="60" required/>
         <p class='error-helper text-danger' ng-show='form.signup.name.$invalid && showErrors'>please enter your full name</p>
       </div>
     </div>
@@ -15,7 +15,7 @@
     <div class='form-group'>
       <label class='col-3 control-label' for='email'>Email</label>
       <div class='col-7'>
-        <input id='email' class='form-control' type='email' name='email' ng-model='formData.email' ng-minlength="3" ng-maxlength="60" required/>
+        <input id='email' class='form-control' type='email' name='email' ng-model='formData.recipient_email' ng-minlength="3" ng-maxlength="60" required/>
         <p class='error-helper text-danger' ng-show='form.signup.email.$invalid && showErrors'>please enter your email address</p>
         <p class='error-helper text-danger' ng-show='form.signup.email.$error.email && showErrors'>please enter a valid email</p>
       </div>

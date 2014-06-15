@@ -1,10 +1,14 @@
+<div class='jumbotron'>
+	<h1>Events</h1>
+</div>
+
 <div class="list-group events">
   <a ng-repeat='event in allEvents' ng-href="#events/{{event.id}}" class="list-group-item">
   	<div class='row'>
-	    <div class='col-md-4 circle'>
+	    <div class='col-xs-4 circle'>
 	     <p class='event-date'> {{event.event_date}} </p>
 	    </div>
-	    <div class='col-md-8'>
+	    <div class='col-xs-8'>
 	    	<p class='event-name'> {{event.name}} </p>
 	    </div>
     </div>
