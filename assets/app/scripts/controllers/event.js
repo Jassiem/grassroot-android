@@ -1,10 +1,21 @@
 function EventCtrl($scope, apiService, $routeParams) {
 	$scope.event;
+	$scope.date = {
+		month: '',
+		day: '',
+		year: ''
+	};
 
 	$scope.init = function() {
 		apiService.get(function(data, status) {
 			if(status === 200) {
 				$scope.event = data.event;
+				var date = new Date($scope.event.event_date);
+
+				$scope.date.month = date.getMonth();
+				$scope.date.day = date.getDay();
+				$scope.date.year = date.getFullYear();
+
 			} else {
 				$scope.event = {name: 'Unable to retrieve event', description: ''};
 			}
