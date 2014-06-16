@@ -27,8 +27,12 @@ body {
 }
 
 .menu .list-group-item {
-  background: rgba(148, 235, 136, .6);
+  background: rgba(54, 150, 62, .6);
   color: #fff;
   font-weight: 500;
+}
+
+.menu .list-group-item:hover {
+  color: #000;
 }
 

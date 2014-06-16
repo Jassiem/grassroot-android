@@ -1,0 +1,9 @@
+<div class='jumbotron'>
+	<h1>Stories</h1>
+</div>
+
+<div class="list-group menu">
+  <a ng-repeat='story in allStories' ng-href="#stories/{{story.id}}" class="list-group-item">
+  	<p> {{story.title}} </p>
+  </a>
+</div>

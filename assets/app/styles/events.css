@@ -16,12 +16,12 @@
 }
 
 .events .list-group-item {
-	background: rgba(148, 235, 136, .6);
+	background: rgba(54, 150, 62, .6);
   color: #fff;
 }
 
 .events .list-group-item:hover {
-	background: rgba(148, 235, 136, .6);
+	color: #000;
 }
 
 .event-date {

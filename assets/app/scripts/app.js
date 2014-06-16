@@ -12,6 +12,14 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
         templateUrl: 'views/location.html',
         controller: 'LocationCtrl'
       })
+      .when('/stories', {
+        templateUrl: 'views/stories.html',
+        controller: 'StoriesCtrl'
+      })
+      .when('/stories/:id', {
+        templateUrl: 'views/story.html',
+        controller: 'StoryCtrl'
+      })
       .when('/events', {
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl'
