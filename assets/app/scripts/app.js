@@ -48,6 +48,14 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
         templateUrl: 'views/newsletter.html',
         controller: 'NewsletterCtrl'
       })
+      .when('/message_center',  {
+        templateUrl: 'views/message_center.html',
+        controller: 'MessageCenterCtrl'
+      })
+      .when('/message/:id',  {
+        templateUrl: 'views/message.html',
+        controller: 'MessageCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,9 @@
+<div class='jumbotron'>
+	<h1>All Messages</h1>
+</div>
+
+<div class="list-group menu">
+  <a ng-repeat='message in allMessages' ng-href="#message/{{message.id}}" class="list-group-item">
+	  {{message.title}}
+  </a>
+</div>
