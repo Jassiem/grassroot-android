@@ -5,6 +5,10 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
 
     $routeProvider
       .when('/', {
+        templateUrl: 'views/message_center.html',
+        controller: 'MessageCenterCtrl'
+      })
+      .when('/home', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
@@ -59,5 +63,9 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .run(['$rootScope', '$location', function ($rootScope, $location) {
+    $location.url("#message_center");
+
+}]);
 

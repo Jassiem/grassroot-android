@@ -104,6 +104,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 				.setContentIntent(contentIntent);
 
 		String message = extras.getString("message");
+		Log.d(TAG, "This be the message: " + message);
 		if (message != null) {
 			mBuilder.setContentText(message);
 		} else {

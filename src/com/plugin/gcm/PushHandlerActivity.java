@@ -58,7 +58,8 @@ public class PushHandlerActivity extends Activity
 	private void forceMainActivityReload()
 	{
 		PackageManager pm = getPackageManager();
-		Intent launchIntent = pm.getLaunchIntentForPackage(getApplicationContext().getPackageName());    		
+		Intent launchIntent = pm.getLaunchIntentForPackage(getApplicationContext().getPackageName());    
+		launchIntent.putExtra("nameMatters", "the extras");
 		startActivity(launchIntent);
 	}
 

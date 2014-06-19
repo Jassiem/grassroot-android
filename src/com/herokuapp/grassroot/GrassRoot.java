@@ -21,6 +21,7 @@ package com.herokuapp.grassroot;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+import android.util.Log;
 
 public class GrassRoot extends CordovaActivity 
 {
@@ -29,9 +30,21 @@ public class GrassRoot extends CordovaActivity
     {
         super.onCreate(savedInstanceState);
         super.init();
+
+        Bundle extras = getIntent().getExtras();
+        String message = "";
+        if(extras != null) {
+          message = extras.getString("nameMatters");
+        }
+
+        if(message != ""){
+            super.loadUrl("file:///android_asset/app/special.html");
+        }else{
+        	Log.d("Info", "we out here");
+            super.loadUrl("file:///android_asset/app/index.html", 10000);
+        }
         // Set by <content src="index.html" /> in config.xml
-        super.loadUrl(Config.getStartUrl());
-        //super.loadUrl("file:///asset/app/index.html");
+        //super.loadUrl(Config.getStartUrl());
     }
 }
 

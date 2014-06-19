@@ -71,8 +71,7 @@ var app = {
       break;
 
       case 'message':
-        // this is the actual push notification. its format depends on the data model from the push server
-        //alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+        console.log('fired after message received.');
       break;
 
       case 'error':
