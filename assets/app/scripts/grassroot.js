@@ -1,7 +1,7 @@
 'use strict';
 
-var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitize','ngRoute', 'ngTouch'])
-  .config(function ($routeProvider) {
+var grassroot = angular.module('grassroot', ['ngCookies', 'ngRoute', 'ui.router', 'ngResource','ngSanitize', 'ngTouch'])
+  .config(function ($urlRouterProvider, $stateProvider, $routeProvider) {
 
     $routeProvider
       .when('/', {
@@ -63,9 +63,5 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
       .otherwise({
         redirectTo: '/'
       });
-  })
-  .run(['$rootScope', '$location', function ($rootScope, $location) {
-    $location.url("#message_center");
-
-}]);
+  });
 

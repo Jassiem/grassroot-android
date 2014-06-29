@@ -1,9 +1,18 @@
 <div class='jumbotron'>
-	<h1>Stories</h1>
+	<h1>News Updates</h1>
 </div>
 
 <div class="list-group menu">
-  <a ng-repeat='story in allStories' ng-href="#stories/{{story.id}}" class="list-group-item">
-  	<p> {{story.title}} </p>
+  <a ng-repeat='story in allStories' ng-href="{{story.url}}" class="list-group-item">
+  	<p class='story-title'> {{story.title}} </p>
+  	<p class='story-content'> {{story.content}} </p>
   </a>
+</div>
+
+<div class='footer'>
+	<div class="btn-group">
+	  <a href='#home'> <button type="button" class="btn btn-default">Home</button> </a>
+	  <a href='#message_center'> <button type="button" class="btn btn-default">Message Center</button> </a>
+	  <a href='#take_action'> <button type="button" class="btn btn-default">Take Action</button> </a>
+	</div>
 </div>

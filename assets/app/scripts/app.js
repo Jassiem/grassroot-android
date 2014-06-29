@@ -8,6 +8,10 @@ var grassroot = angular.module('grassroot', ['ngCookies','ngResource','ngSanitiz
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/home', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
       .when('/location', {
         templateUrl: 'views/location.html',
         controller: 'LocationCtrl'
