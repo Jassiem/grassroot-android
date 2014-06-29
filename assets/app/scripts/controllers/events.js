@@ -1,5 +1,6 @@
 function EventsCtrl($scope, apiService) {
 	$scope.allEvents = [];
+	$scope.daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
   $scope.getEvents = function() {
 		apiService.get(function(data, status) {
@@ -9,10 +10,11 @@ function EventsCtrl($scope, apiService) {
 				for(i = 0; i < $scope.allEvents.length; i++) {
 					var date = new Date($scope.allEvents[i].event_date);
 					var month = date.getMonth();
-					var day = date.getDay();
+					var day = date.getDate();
 					var year = date.getFullYear();
 
-					$scope.allEvents[i].event_date = month + '/' + day + '\n' + year;
+					$scope.allEvents[i].event_date = month + '/' + day + '/' + year;
+					$scope.allEvents[i].day = $scope.daysOfTheWeek[date.getDay()];
 				}
 				$scope.errorMessage = '';
 			} else {
