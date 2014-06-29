@@ -1,7 +1,7 @@
 'use strict';
 
-var grassroot = angular.module('grassroot', ['ngCookies', 'ngRoute', 'ui.router', 'ngResource','ngSanitize', 'ngTouch'])
-  .config(function ($urlRouterProvider, $stateProvider, $routeProvider) {
+var grassroot = angular.module('grassroot', ['ngCookies', 'ngRoute', 'ngResource','ngSanitize', 'ngTouch'])
+  .config(function ($routeProvider) {
 
     $routeProvider
       .when('/', {
