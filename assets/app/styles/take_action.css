@@ -1,6 +1,20 @@
 .footer {
 	margin-left: auto;
 	margin-right: auto;
-	width: 60%;
+	width: 90%;
 	text-align: center;
+}
+
+.glyphicon {
+	margin-right: 10px;
+}
+
+.take-action .list-group-item {
+  background: rgba(54, 73, 194, .6);
+  color: #fff;
+  font-weight: 500;
+}
+
+.take-action .list-group-item:hover {
+  color: #000;
 }
