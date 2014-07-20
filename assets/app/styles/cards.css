@@ -1,0 +1,22 @@
+.card {
+	background: rgba(54, 150, 62, .6);
+	color: #fff;
+	width: 95%;
+	margin: 0 auto 15px auto;
+}
+
+.row {
+	margin-top: 20px;
+}
+
+.title {
+	text-align: center;
+}
+
+.graphic, .description {
+	padding-left: 10px;
+}
+
+.start, .end{
+	margin: 0 0 2px 0;
+}

@@ -1,0 +1,22 @@
+<div class='card' ng-repeat='card in allCards'>
+	<h2 class='title'> {{card.title}} </h2>
+	<hr/>
+	<div class='row'>
+		<div class='col-xs-6 graphic'>
+			<img ng-src='{{card.graphic_file_name}}'/>
+		</div>
+		<div class='col-xs-6 description'>
+			<p> {{card.description}} </p>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-xs-6'>
+			<p class='start'> Start Date:</p>
+			<p> {{card.start_date}} </p>
+		</div>
+		<div class='col-xs-6'>
+			<p class='end'> End Date: </p>
+			<p> {{card.end_date}} </p>
+		</div>
+	</div>
+</div>

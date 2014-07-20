@@ -60,6 +60,10 @@ var grassroot = angular.module('grassroot', ['ngCookies', 'ngRoute', 'ngResource
         templateUrl: 'views/message.html',
         controller: 'MessageCtrl'
       })
+      .when('/cards', {
+        templateUrl: 'views/cards.html',
+        controller: 'CardsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
